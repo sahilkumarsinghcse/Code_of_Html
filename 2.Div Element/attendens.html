@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance System</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background: #f2f2f2;
+            padding: 20px;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        table{
+            width: 100%;
+            background: white;
+            border-collapse: collapse;
+        }
+
+        th, td{
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        button{
+            padding: 8px 15px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            color: white;
+        }
+
+        .present{
+            background: green;
+        }
+
+        .absent{
+            background: red;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Student Attendance System</h1>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>Attendance</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+
+        <tbody id="studentTable">
+
+        </tbody>
+
+    </table>
+
+<script>
+
+    let students = [
+
+        {
+            roll: 1,
+            name: "Akash",
+            parent: "9113178569"
+        },
+
+        {
+            roll: 2,
+            name: "Rohan",
+            parent: "6203422313"
+        },
+
+        {
+            roll: 3,
+            name: "Priya",
+            parent: "9876511111"
+        }
+
+    ];
+
+    let table = document.getElementById("studentTable");
+
+    students.forEach((student) => {
+
+        let row = `
+        
+        <tr>
+
+            <td>${student.roll}</td>
+
+            <td>${student.name}</td>
+
+            <td>
+
+                <button class="present"
+                onclick="markPresent('${student.name}')">
+                Present
+                </button>
+
+                <button class="absent"
+                onclick="markAbsent('${student.name}', '${student.parent}')">
+                Absent
+                </button>
+
+            </td>
+
+            <td id="msg${student.roll}">
+                -
+            </td>
+
+        </tr>
+        
+        `;
+
+        table.innerHTML += row;
+
+    });
+
+    function markPresent(name){
+
+        alert(name + " is Present");
+
+    }
+
+    function markAbsent(name, parent){
+
+        alert(name + " is Absent");
+
+        let message =
+        "Message sent to parent number " + parent;
+
+        console.log(message);
+
+        alert(message);
+
+    }
+
+</script>
+
+</body>
+</html>

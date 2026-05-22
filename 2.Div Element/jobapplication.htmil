@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            width: 70%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .section-title {
+            background: #333;
+            color: white;
+            padding: 8px;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+
+        .form-group label {
+            width: 25%;
+        }
+
+        .form-group input {
+            width: 30%;
+            border: none;
+            border-bottom: 1px solid black;
+            outline: none;
+        }
+
+        .checkbox-group {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>JOB APPLICATION FORM</h1>
+
+    <div class="section-title">PERSONAL INFORMATION</div>
+
+    <div class="form-group">
+        <label>Name:</label>
+        <input type="text">
+
+        <label>Date of Birth:</label>
+        <input type="date">
+    </div>
+
+    <div class="form-group">
+        <label>Address:</label>
+        <input type="text">
+
+        <label>Email Address:</label>
+        <input type="email">
+    </div>
+
+    <div class="form-group">
+        <label>City, State:</label>
+        <input type="text">
+
+        <label>Phone Number:</label>
+        <input type="text">
+    </div>
+
+    <div class="form-group">
+        <label>Position Applied For:</label>
+        <input type="text">
+
+        <label>Date Available:</label>
+        <input type="date">
+    </div>
+
+    <div class="checkbox-group">
+        <label>Desired Pay:</label>
+        <input type="checkbox"> Hour
+        <input type="checkbox"> Salary
+    </div>
+
+    <div class="checkbox-group">
+        <label>Employment Desired:</label>
+        <input type="checkbox"> Full Time
+        <input type="checkbox"> Part Time
+        <input type="checkbox"> Seasonal
+    </div>
+
+    <div class="section-title">EMPLOYMENT ELIGIBILITY</div>
+
+    <p>Are you legally eligible to work? 
+        <input type="radio" name="legal"> Yes
+        <input type="radio" name="legal"> No
+    </p>
+
+    <p>Have you ever worked for this employer? 
+        <input type="radio" name="worked"> Yes
+        <input type="radio" name="worked"> No
+    </p>
+
+    <p>Have you ever been convicted of a felony? 
+        <input type="radio" name="felony"> Yes
+        <input type="radio" name="felony"> No
+    </p>
+
+    <div class="section-title">EDUCATION</div>
+
+    <div class="form-group">
+        <label>High School:</label>
+        <input type="text">
+
+        <label>City / State:</label>
+        <input type="text">
+    </div>
+
+    <div class="form-group">
+        <label>College:</label>
+        <input type="text">
+
+        <label>Diploma:</label>
+        <input type="text">
+    </div>
+
+    <div class="form-group">
+        <label>Degree / Certification:</label>
+        <input type="text">
+    </div>
+
+    <br>
+    <center>
+        <button type="submit">Submit</button>
+    </center>
+
+</div>
+
+</body>
+</html>
